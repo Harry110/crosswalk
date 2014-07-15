@@ -1,0 +1,11 @@
+[user]
+name = Harry110 
+email = wei.w.zhang@intel.com
+[core]
+editor = vim
+deltaBaseCacheLimit = 1G
+[color]
+ui = true
+[http]
+proxy = socks5h://proxy.jf.intel.com:1080
+

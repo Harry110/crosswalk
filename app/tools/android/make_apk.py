@@ -68,6 +68,7 @@ def Find(name, path):
     if name in files:
       key = os.path.join(root, name)
       sdk_version = os.path.basename(os.path.dirname(key))
+      #there is a number in it
       str_num = re.search(r'\d+', sdk_version)
       if str_num:
         result[key] = int(str_num.group())
@@ -130,8 +131,7 @@ def ParseManifest(options, app_info):
     options.fullscreen = True
   elif parser.GetFullScreenFlag().lower() == 'false':
     options.fullscreen = False
-
-
+  print('*****finish********')
 def ParseXPK(options, out_dir):
   cmd = ['python', 'parse_xpk.py',
          '--file=%s' % os.path.expanduser(options.xpk),
